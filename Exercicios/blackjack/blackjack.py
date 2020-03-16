@@ -20,7 +20,12 @@ class Baralho:
                                 dict_cartas.update({'A':11})
                                 lista_pontuacao.append(dict_cartas[numeros])
                             else:
-                                pass
+                                if 'A' in lista_pontuacao[0]:
+                                    lista_pontuacao.append(dict_cartas[numeros])
+                                    del(lista_pontuacao[0])
+                                    lista_pontuacao.insert(0, 1)
+                                else:
+                                    pass
                         else:
                             pass
                         lista_pontuacao.append(dict_cartas[numeros])
